@@ -54,13 +54,13 @@ int main()
 		Sunday = 7
 	};
 
-	cout << "Monday: " << (int)WeekDay::Monday << endl;
-	cout << "Tuesday: " << (int)WeekDay::Tuesday << endl;
-	cout << "Wednesday: " << (int)WeekDay::Wednesday << endl;
-	cout << "Thursday: " << (int)WeekDay::Thursday << endl;
-	cout << "Friday: " << (int)WeekDay::Friday << endl;
-	cout << "Saturday: " << (int)WeekDay::Saturday << endl;
-	cout << "Sunday: " << (int)WeekDay::Sunday << endl;
+	cout << "Monday: " << static_cast<int>(WeekDay::Monday) << endl;
+	cout << "Tuesday: " << static_cast<int>(WeekDay::Tuesday) << endl;
+	cout << "Wednesday: " << static_cast<int>(WeekDay::Wednesday) << endl;
+	cout << "Thursday: " << static_cast<int>(WeekDay::Thursday) << endl;
+	cout << "Friday: " << static_cast<int>(WeekDay::Friday) << endl;
+	cout << "Saturday: " << static_cast<int>(WeekDay::Saturday) << endl;
+	cout << "Sunday: " << static_cast<int>(WeekDay::Sunday) << endl;
 
 	cout << endl;
 
