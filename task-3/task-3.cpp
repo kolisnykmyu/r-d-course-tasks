@@ -1,17 +1,24 @@
+#define _USE_MATH_DEFINES
+
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
 int main()
 {
 	//1.
+	const unsigned SecondsInMinute = 60;
+	const unsigned MinutesInHour = 60;
+	const unsigned SecondsInHour = SecondsInMinute * MinutesInHour;
+
 	cout << "Task 1: \n";
 	int seconds;
 	
 	cout << "Enter seconds: ";
 	cin >> seconds;
 
-	cout << seconds / 3600 << " hours, " << (seconds % 3600) / 60 << " minutes, " << (seconds % 3600) % 60 << " seconds" << endl;
+	cout << seconds / SecondsInHour << " hours, " << (seconds % SecondsInHour) / MinutesInHour << " minutes, " << (seconds % SecondsInHour) % SecondsInMinute << " seconds" << endl;
 	
 
 	//2.
@@ -22,7 +29,7 @@ int main()
 	
 	double sum = a + b + c;
 	double product = a * b * c;
-	double average = static_cast<double>(sum) / 3;
+	double average = sum / 3;
 
 	cout << "Sum: " << sum << endl;
 	cout << "Product: " << product << endl;
@@ -65,13 +72,11 @@ int main()
 	cout << "Task 5: \n";
 	double radius;
 
-	const double PI = 3.14159;
-
 	cout << "Enter radius of circle: \n";
 	cin >> radius;
 
-	double area = PI * radius * radius;
-	double circuit = 2 * PI * radius;
+	double area = M_PI * pow(radius, 2);
+	double circuit = 2 * M_PI * radius;
 
 	cout << "Area: " << area << endl;
 	cout << "Circuit: " << circuit << endl;
